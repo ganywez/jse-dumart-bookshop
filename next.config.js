@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  // Explicitly disable React Compiler to fix babel-plugin-react-compiler error
+  experimental: {
+    reactCompiler: false,
+  },
+
   // Image optimization for production
   images: {
     domains: [
