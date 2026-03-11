@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  // React compiler for better performance
-  experimental: {
-    reactCompiler: true,
-  },
-
   // Image optimization for production
   images: {
     domains: [
