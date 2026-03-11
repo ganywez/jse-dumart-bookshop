@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSEdumart Bookstore - Quality School Supplies & Learning Materials</title>
+    <meta name="description" content="JSEdumart Bookstore offers premium educational supplies, stationery, and learning materials for students in Nairobi. Fast delivery, M-Pesa payments, and exceptional quality guaranteed.">
+    <meta name="theme-color" content="#001f3f">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-EvBWYkDuq1Om4i33k/4vM5VIqH5DP+6l7ZGYdNm9xVbVJRYgCM7z7Yt5+lfAC4wMKAHxq1M5cVXrpN4eSKHdg==" crossOrigin="anonymous" referrerPolicy="no-referrer">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <i class="fas fa-book-open"></i>
+                    <span>JSEdumart</span>
+                </a>
+            </div>
+            <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="btn-primary" style="padding: 0.5rem 1.5rem;">Shop Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slide active" data-slide="0">
+            <div class="hero-gradient" style="background: linear-gradient(135deg, #001f3f 0%, #2d4a7c 100%);"></div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i class="fas fa-school"></i>
+                    <span>JSEdumart Bookstore</span>
+                </div>
+                <h1>Back to School 2026</h1>
+                <p>Get all your school supplies at unbeatable prices</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="about.html" class="btn btn-secondary">View Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" data-slide="1">
+            <div class="hero-gradient" style="background: linear-gradient(135deg, #0c4a6e 0%, #20c997 100%);"></div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>JSEdumart Bookstore</span>
+                </div>
+                <h1>KCSE Revision Materials</h1>
+                <p>Past papers, revision guides & calculators ready for exams</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">View Revision <i class="fas fa-arrow-right"></i></a>
+                    <a href="about.html" class="btn btn-secondary">View Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" data-slide="2">
+            <div class="hero-gradient" style="background: linear-gradient(135deg, #7c2d12 0%, #ff8c00 100%);"></div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i class="fas fa-palette"></i>
+                    <span>JSEdumart Bookstore</span>
+                </div>
+                <h1>Art Supplies Sale</h1>
+                <p>Up to 20% off Faber-Castell, Pelikan & Crayola products</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">Shop Art Supplies <i class="fas fa-arrow-right"></i></a>
+                    <a href="about.html" class="btn btn-secondary">View Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Navigation -->
+        <button class="hero-nav hero-prev" id="heroPrev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav hero-next" id="heroNext" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Hero Indicators -->
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+            <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="color: #20c997;">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Free within Nairobi CBD</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="color: #ffc107;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Same Day Delivery</h3>
+                    <p>Order before 2PM</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="color: #28a745;">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <h3>M-Pesa Accepted</h3>
+                    <p>Easy mobile payments</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="color: #001f3f;">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>100% original products</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="color: #ff6b35;">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>WhatsApp & Phone</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="color: #20c997;">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>7-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://source.unsplash.com/300x400/?crayons" alt="Crayons Veda">
+                        <span class="product-badge">Featured</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Crayons Veda</h3>
+                        <p class="product-desc">Pack of smooth, brightly colored Veda crayons perfect for school coloring.</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(12 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">KSh 80</span>
+                            <button class="btn-icon" title="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://source.unsplash.com/300x400/?pencils" alt="HB Pencils">
+                        <span class="product-badge trending">Trending</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>HB Pencils</h3>
+                        <p class="product-desc">Pack of HB pencils suitable for writing and drawing.</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(40 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">KSh 180</span>
+                            <button class="btn-icon" title="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://source.unsplash.com/300x400/?watercolor,paint" alt="Water Colour">
+                    </div>
+                    <div class="product-info">
+                        <h3>Water Colour</h3>
+                        <p class="product-desc">Set of water colour paints suitable for school art projects.</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(15 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">KSh 80</span>
+                            <button class="btn-icon" title="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://source.unsplash.com/300x400/?paper,book" alt="Ream Paper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ream Paper</h3>
+                        <p class="product-desc">High-quality A4 ream paper suitable for printers and photocopiers.</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(20 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">KSh 750</span>
+                            <button class="btn-icon" title="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Shop?</h2>
+            <p>Browse our complete collection of quality school supplies and learning materials</p>
+            <a href="about.html" class="btn btn-primary btn-lg">Browse All Products</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About JSEdumart</h4>
+                <p>Your trusted source for quality educational supplies and learning materials in Kenya.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +254 704 454 556</p>
+                <p><i class="fas fa-envelope"></i> info@jsdumart.co.ke</p>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 JSEdumart Bookstore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
