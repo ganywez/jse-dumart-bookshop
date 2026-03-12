@@ -712,7 +712,7 @@ export default function CheckoutPage() {
                       {item.product.name} <span className="text-xs">x{item.quantity}</span>
                     </span>
                     <span className="ml-2 shrink-0 font-medium text-foreground">
-                      {formatPrice((item.product.sale_price ?? item.product.price) * item.quantity)}
+                      formatPrice((item.product.sale_price ?? item.product.price) * item.quantity)
                     </span>
                   </div>
                 ))}
