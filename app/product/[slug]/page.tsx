@@ -37,7 +37,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
   }
 
   const whatsappMsg = encodeURIComponent(
-    `Hi JSEdumart! I'm interested in: ${product.name} (${formatPrice(product.sale_price ?? product.price)}). Is it available?`
+    `Hi JSEdumart! I'm interested in: ${product.name} (${formatPrice(product.salePrice ?? product.price)}). Is it available?`
   )
 
   return (
@@ -67,7 +67,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                   -{product.discount}% OFF
                 </span>
               )}
-              {product.new_arrival && (
+              {product.newArrival && (
                 <span className="absolute right-4 top-4 rounded-full bg-[var(--green)] px-3 py-1 text-xs font-bold text-white">
                   NEW ARRIVAL
                 </span>

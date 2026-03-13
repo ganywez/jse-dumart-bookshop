@@ -32,7 +32,7 @@ export default function CheckoutPage() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Login Required</h2>
           <p className="text-gray-600 mb-6">You need to be logged in to proceed with checkout.</p>
-          <button
+          <button 
             onClick={() => router.push('/login?redirect=/checkout')}
             className="bg-[var(--navy)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[var(--teal)] transition-all inline-flex items-center gap-2 w-full justify-center"
           >
@@ -51,7 +51,7 @@ export default function CheckoutPage() {
           <i className="fa-solid fa-shopping-cart text-5xl text-muted-foreground/30 mb-4"></i>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Cart is Empty</h2>
           <p className="text-gray-600 mb-6">Add some items to your cart before checkout.</p>
-          <Link
+          <Link 
             href="/shop"
             className="bg-[var(--navy)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[var(--teal)] transition-all inline-flex items-center gap-2"
           >
@@ -84,10 +84,10 @@ export default function CheckoutPage() {
     setIsProcessing(true)
     // Show paybill details to user - they will send payment manually
     setMpesaPromptSent(true)
-
+    
     // Complete order immediately with paybill pending status
     await new Promise((r) => setTimeout(r, 1000))
-
+    
     setIsProcessing(false)
     setOrderPlaced(true)
     clearCart()
@@ -164,7 +164,7 @@ export default function CheckoutPage() {
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-muted"
             >
               <svg className="h-4 w-4 text-[#25d366]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.171l-.346.194-3.57-.374.76 2.77-.179.286a9.874 9.874 0 001.515 5.031h.001a9.926 9.926 0 005.313 3.116l.552.105 3.635.363-.375-3.548.202-.32c.553-.894.867-1.965.867-3.113 0-5.335-4.343-9.67-9.681-9.67z" />
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.171l-.346.194-3.57-.374.76 2.77-.179.286a9.874 9.874 0 001.515 5.031h.001a9.926 9.926 0 005.313 3.116l.552.105 3.635.363-.375-3.548.202-.32c.553-.894.867-1.965.867-3.113 0-5.335-4.343-9.67-9.681-9.67z"/>
               </svg>
               Track via WhatsApp
             </a>
@@ -203,12 +203,12 @@ export default function CheckoutPage() {
   const stepIcons = {
     shipping: (
       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z" />
+        <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z"/>
       </svg>
     ),
     payment: (
       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z" />
+        <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z"/>
       </svg>
     ),
     confirm: (
@@ -249,10 +249,11 @@ export default function CheckoutPage() {
               <div key={s.key} className="flex items-center">
                 <div className="flex flex-col items-center">
                   <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-all duration-500 ${i <= stepIndex
+                    className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-all duration-500 ${
+                      i <= stepIndex
                         ? "bg-[var(--navy)] text-white shadow-lg shadow-[var(--navy)]/20"
                         : "bg-muted text-muted-foreground"
-                      }`}
+                    }`}
                   >
                     {i < stepIndex ? (
                       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -267,8 +268,9 @@ export default function CheckoutPage() {
                   </span>
                 </div>
                 {i < steps.length - 1 && (
-                  <div className={`mx-3 mb-5 h-0.5 w-12 rounded-full transition-all duration-500 sm:w-20 md:w-28 ${i < stepIndex ? "bg-[var(--navy)]" : "bg-muted"
-                    }`} />
+                  <div className={`mx-3 mb-5 h-0.5 w-12 rounded-full transition-all duration-500 sm:w-20 md:w-28 ${
+                    i < stepIndex ? "bg-[var(--navy)]" : "bg-muted"
+                  }`} />
                 )}
               </div>
             ))}
@@ -283,7 +285,7 @@ export default function CheckoutPage() {
               <div className="animate-fade-in-up rounded-2xl border border-border bg-white p-6 shadow-sm md:p-8">
                 <h2 className="mb-6 flex items-center gap-2 text-lg font-bold text-foreground">
                   <svg className="h-5 w-5 text-[var(--teal)]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z" />
+                    <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z"/>
                   </svg>
                   Shipping Details
                 </h2>
@@ -438,7 +440,7 @@ export default function CheckoutPage() {
               <div className="animate-fade-in-up rounded-2xl border border-border bg-white p-6 shadow-sm md:p-8">
                 <h2 className="mb-6 flex items-center gap-2 text-lg font-bold text-foreground">
                   <svg className="h-5 w-5 text-[var(--teal)]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z" />
+                    <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z"/>
                   </svg>
                   Payment Method
                 </h2>
@@ -447,13 +449,15 @@ export default function CheckoutPage() {
                   {/* M-Pesa */}
                   <button
                     onClick={() => setPaymentMethod("mpesa")}
-                    className={`flex w-full items-center gap-4 rounded-xl border-2 p-5 text-left transition-all ${paymentMethod === "mpesa"
+                    className={`flex w-full items-center gap-4 rounded-xl border-2 p-5 text-left transition-all ${
+                      paymentMethod === "mpesa"
                         ? "border-[#4caf50] bg-[#4caf50]/5 shadow-md"
                         : "border-border hover:border-muted-foreground/30 hover:bg-muted/30"
-                      }`}
+                    }`}
                   >
-                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${paymentMethod === "mpesa" ? "bg-[#4caf50] text-white" : "bg-muted text-muted-foreground"
-                      }`}>
+                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
+                      paymentMethod === "mpesa" ? "bg-[#4caf50] text-white" : "bg-muted text-muted-foreground"
+                    }`}>
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16z" />
                       </svg>
@@ -467,8 +471,9 @@ export default function CheckoutPage() {
                         Pay instantly via Safaricom M-Pesa STK Push
                       </p>
                     </div>
-                    <div className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${paymentMethod === "mpesa" ? "border-[#4caf50] bg-[#4caf50]" : "border-muted-foreground/30"
-                      }`}>
+                    <div className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
+                      paymentMethod === "mpesa" ? "border-[#4caf50] bg-[#4caf50]" : "border-muted-foreground/30"
+                    }`}>
                       {paymentMethod === "mpesa" && <i className="fa-solid fa-check text-xs text-white"></i>}
                     </div>
                   </button>
@@ -476,13 +481,15 @@ export default function CheckoutPage() {
                   {/* COD */}
                   <button
                     onClick={() => setPaymentMethod("cod")}
-                    className={`flex w-full items-center gap-4 rounded-xl border-2 p-5 text-left transition-all ${paymentMethod === "cod"
+                    className={`flex w-full items-center gap-4 rounded-xl border-2 p-5 text-left transition-all ${
+                      paymentMethod === "cod"
                         ? "border-[var(--yellow)] bg-[var(--yellow)]/5 shadow-md"
                         : "border-border hover:border-muted-foreground/30 hover:bg-muted/30"
-                      }`}
+                    }`}
                   >
-                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${paymentMethod === "cod" ? "bg-[var(--yellow)] text-[var(--navy)]" : "bg-muted text-muted-foreground"
-                      }`}>
+                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
+                      paymentMethod === "cod" ? "bg-[var(--yellow)] text-[var(--navy)]" : "bg-muted text-muted-foreground"
+                    }`}>
                       <i className="fa-solid fa-hand-holding-dollar text-xl"></i>
                     </div>
                     <div className="flex-1">
@@ -491,8 +498,9 @@ export default function CheckoutPage() {
                         Pay when your order is delivered to you
                       </p>
                     </div>
-                    <div className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${paymentMethod === "cod" ? "border-[var(--yellow)] bg-[var(--yellow)]" : "border-muted-foreground/30"
-                      }`}>
+                    <div className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
+                      paymentMethod === "cod" ? "border-[var(--yellow)] bg-[var(--yellow)]" : "border-muted-foreground/30"
+                    }`}>
                       {paymentMethod === "cod" && <i className="fa-solid fa-check text-xs text-[var(--navy)]"></i>}
                     </div>
                   </button>
@@ -527,11 +535,11 @@ export default function CheckoutPage() {
                     <div className="mt-4 bg-[#4caf50]/10 rounded-lg p-3 border-l-4 border-[#4caf50]">
                       <p className="text-xs text-muted-foreground">
                         <strong className="text-foreground block mb-1">Payment Steps:</strong>
-                        1. Open M-Pesa on your phone<br />
-                        2. Go to Lipa Na M-Pesa → Paybill<br />
-                        3. Enter Business No: <strong>7815771</strong><br />
-                        4. Enter Account Ref: <strong>JSE{Date.now().toString().slice(-6)}</strong><br />
-                        5. Enter Amount: <strong>{formatPrice(grandTotal)}</strong><br />
+                        1. Open M-Pesa on your phone<br/>
+                        2. Go to Lipa Na M-Pesa → Paybill<br/>
+                        3. Enter Business No: <strong>7815771</strong><br/>
+                        4. Enter Account Ref: <strong>JSE{Date.now().toString().slice(-6)}</strong><br/>
+                        5. Enter Amount: <strong>{formatPrice(grandTotal)}</strong><br/>
                         6. Enter your M-Pesa PIN and confirm
                       </p>
                     </div>
@@ -570,7 +578,7 @@ export default function CheckoutPage() {
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="flex items-center gap-2 font-bold text-foreground">
                       <svg className="h-5 w-5 text-[var(--teal)]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z" />
+                        <path d="M18 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM9 18.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20 8H4V4h16v4zm-11 11H3V9h6v10z"/>
                       </svg>
                       Delivery Details
                     </h3>
@@ -592,7 +600,7 @@ export default function CheckoutPage() {
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="flex items-center gap-2 font-bold text-foreground">
                       <svg className="h-5 w-5 text-[var(--teal)]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z" />
+                        <path d="M20 8H4V4h16m0 12H4v-6h16m0 8H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z"/>
                       </svg>
                       Payment Method
                     </h3>
@@ -616,7 +624,7 @@ export default function CheckoutPage() {
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--yellow)]">
                         <svg className="h-5 w-5 text-[var(--navy)]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
                         </svg>
                       </div>
                       <div>
@@ -631,7 +639,7 @@ export default function CheckoutPage() {
                 <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
                   <h3 className="mb-4 flex items-center gap-2 font-bold text-foreground">
                     <svg className="h-5 w-5 text-[var(--teal)]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 16V8c0-1.1-.9-2-2-2h-3V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-16 0V8h14v8H5z" />
+                      <path d="M21 16V8c0-1.1-.9-2-2-2h-3V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-16 0V8h14v8H5z"/>
                     </svg>
                     Order Items ({items.length})
                   </h3>
@@ -712,7 +720,7 @@ export default function CheckoutPage() {
                       {item.product.name} <span className="text-xs">x{item.quantity}</span>
                     </span>
                     <span className="ml-2 shrink-0 font-medium text-foreground">
-                      {formatPrice((item.product.sale_price ?? item.product.price) * item.quantity)}
+                      {formatPrice((item.product.salePrice ?? item.product.price) * item.quantity)}
                     </span>
                   </div>
                 ))}
